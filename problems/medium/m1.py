@@ -15,6 +15,8 @@ def math_operations_menu(choice):
         print("Division:", a / b)   
     elif choice == 5:
         print("Modulo:", a % b)   
+    elif choice == 6:
+        print("Exponent: ", a ** b)
     else:
         print("Invalid option")
 
@@ -23,5 +25,6 @@ print("2. Subtract")
 print("3. Multiply")
 print("4. Divide")
 print("5. Modulo")
+print("6. Exponent")
 choice = int(input("Enter your choice: "))
 math_operations_menu(choice)
