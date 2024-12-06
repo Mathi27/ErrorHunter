@@ -7,12 +7,19 @@ class TodoList:
         print(f"Task '{task}' added.")
 
     def remove_task(self, task):
-        self.tasks.remove(task)
-        print(f"Task '{task}' removed.")
+        if task in self.tasks:
+            self.tasks.remove(task)
+            print(f"Task '{task}' removed.")
+        else:
+            print(f"task'{task}'not found in the list")
 
     def display_tasks(self):
-        for task in self.tasks:
-            print(f"- {task}")
+        if self.tasks:
+            print("your task:")
+            for task in self.tasks:
+                print(f"- {task}")
+        else:
+            print("no task in the list")
 
  
 todo = TodoList()
