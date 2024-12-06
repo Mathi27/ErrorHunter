@@ -1,7 +1,7 @@
 def hangman():
     word = "python"
     guessed = ["_"] * len(word)
-    attempts = 6
+    attempts = 7
     used_letters = set()
 
     print("Word to guess:", " ".join(guessed))
