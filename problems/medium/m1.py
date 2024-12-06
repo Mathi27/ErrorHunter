@@ -10,7 +10,8 @@ def math_operations_menu():
     print("5. Modulo")
     choice = int(input("Enter your choice: "))
 
-    a, b = map(int, input("Enter two numbers: ").split())
+    a=int(input("Enter a num1:"))
+    b=int(input("Enter a num2:"))
 
     if choice == 1:
         print("Subtraction:", a - b)   
@@ -24,3 +25,4 @@ def math_operations_menu():
         print("Modulo:", a // b)   
     else:
         print("Invalid option")
+math_operations_menu()
