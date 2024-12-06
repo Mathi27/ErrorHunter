@@ -1,15 +1,9 @@
 '''
 Create a program that checks whether a given number is a prime number or not.
 '''
-def is_prime(num):
-    if num < 2:
-        return False
-    for i in range(2, num):
-        if num % i == 0:
-            return False
-    return True
+a=int(input("Enter Number:"))
 
-n = int(input("Enter a number: "))
-for i in range(2, n + 1):
-    if is_prime(i):
-        print(i)
+if (a%2==0 or a%3==0) and a/2>=2:
+    print(a,"is not a Prime Number")
+else:
+    print(a,"is a Prime Number")
