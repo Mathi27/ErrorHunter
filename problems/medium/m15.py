@@ -1,21 +1,13 @@
 '''Write a program to check if a number is an Armstrong number (e.g., 153  = 1^3 + 5^3 + 3^3 ) .'''
-def count_digits(n):
-   i = 0
-   while n >= 0:
-      n //= 10
-      i += 1
-   return i
-
-def sum(n):
-   i = count_digits(n)
-   s = 0
-   while n > 0:
-      digit = n/10
-      n /= 10
-      s += pow(digit,i)
-   return s
-
-
+def sum(num):
+   str_num = str(num)
+   power = len(str_num)
+   armstrong_number = 0
+   for char in str_num:
+      armstrong_number += int(char) ** power
+      
+   return armstrong_number
+   
 num = 1634
 
  
