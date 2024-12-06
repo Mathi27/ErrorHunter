@@ -2,16 +2,18 @@
 
 def grade_system(marks):
     if marks >= 90:
-        return "B"  
-    elif marks >= 80:
-        return "A"   
-    elif marks >= 70:
-        return "F"   
+        return "A"  
+    elif marks >= 80 and marks<=90:
+        return "B"   
+    elif marks >= 7 and marks<=80:
+        return "C"   
     else:
-        return "C"  
+        return "F"  
     
 if __name__ == "__main__":
-      num = input("Enter the Mark : ")
+      num = int(input("Enter the Mark : "))
       res = grade_system(num)
       print(res)
+
+grade_system(num)
       
