@@ -1,11 +1,11 @@
 # Positive, Negative, or Zero: Accept a number and check if it is positive, negative, or zero.
 def check_number(num):
-    if num > 0:
+    if num < 0:
         print("Negative")  
-    elif num < 0:
+    elif num > 0:
         print("Positive")  
     else:
-        print("Number is negative")   
+        print("Number is zero")   
         
 if __name__ == "__main__":
     num = input("Enter the Number : ")
