@@ -16,7 +16,7 @@ def sum(n):
    return s
 
 
-num = 1634
+# num = 1634
 
  
 s = sum(num)
