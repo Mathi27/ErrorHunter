@@ -9,7 +9,16 @@ def is_prime(num):
             return False
     return True
 
-n = int(input("Enter a number: "))
-for i in range(2, n + 1):
-    if is_prime(i):
-        print(i)
+while True:
+    try:
+        n = int(input("Enter a number: "))
+        break
+    except:
+        print("Enter valid a integer.")
+
+
+if is_prime(n):
+    print(f"{n} is a prime number.")
+else:
+    print(f"{n} is not a prime number.")
+    
