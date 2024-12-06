@@ -5,6 +5,16 @@ Create a menu to perform basic mathematical operations (addition, subtraction, m
 def math_operations_menu(choice):
     a, b = map(int, input("Enter two numbers(separated by commas): ").split(sep=","))
 
+
+    if choice == 2:
+        print("Subtraction:", a - b)   
+    elif choice == 1:
+        print("Addition:", a + b)   
+    elif choice == 4:
+        print("Division:", a / b)   
+    elif choice == 3:
+        print("Multiplication:", a * b)   
+ 
     if choice == 1:
         print(f"Subtraction of {a} and {b}:{a - b}")   
     elif choice == 2:
@@ -13,11 +23,14 @@ def math_operations_menu(choice):
         print(f"Division of {a} and {b}:{a / b}")   
     elif choice == 4:
         print(f"Multiplication of {a} and {b}:{a * b}")   
-    elif choice == 5:
+     elif choice == 5:
         print(f"Modulus of {a} and {b}:{a // b}")   
     elif choice == 6:
         print(f"{a} to the power of {b}:{a**b}")
     else:
+        print("Invalid option")
+math_operations_menu()
+ 
         print("Invalid option!!!")
 print("-------------Mathematical operation menu---------------")
 print("1. Add")
@@ -29,3 +42,4 @@ print("6. Expontential")
 choice = int(input("Enter your choice: "))
 math_operations_menu(choice)
 print("-------------------------------------------------------")
+ 

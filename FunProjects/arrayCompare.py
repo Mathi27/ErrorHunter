@@ -15,10 +15,11 @@ def comp(array1, array2):
         return False
       
      
-    if (sorted(array1) == sorted([i ** 2 for i in array2])) and (sorted(array2) == sorted([i ** 2 for i in array1])):  
+    if (sorted(array1) == sorted([i ** 2 for i in array2])) or (sorted(array2) == sorted([i ** 2 for i in array1])):  
         return True
       
     return False
   
- 
-comp([1,2,3,4], [1,4,9,16])
+lis1=eval(input("Enter list 1: "))
+lis2=eval(input("Enter list 2: "))
+print(comp(lis1,lis2))
