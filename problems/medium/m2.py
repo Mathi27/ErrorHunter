@@ -17,3 +17,4 @@ def array_operations_menu():
         print("Sorted Array:", arr) 
     else:
         print("Invalid option")
+array_operations_menu()
