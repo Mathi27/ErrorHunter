@@ -9,10 +9,12 @@ def day_of_week(day):
         6: "Saturday",
         7: "Sunday"
     }
-    return switch[8]   
+    return switch[day]   
 if __name__ == "__main__":
-    
-    xcd = day_of_week(32)
-    print(xcd)
-    
+    day=int(input("Enter The Number:"))
+    if str(day) in "1234567":
+        xcd = day_of_week(day)
+        print(xcd)
+    else:
+        print("Enter Valid Input")
     
