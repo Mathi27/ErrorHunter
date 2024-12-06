@@ -3,7 +3,7 @@ def print_numbers(n):
     i = 1
     while i <= n:
         print(i)
-        n -= 1   
+        n += 1   
 
 if __name__ == "__main__":
     num = int(input("Enter the Number "))
