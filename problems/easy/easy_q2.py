@@ -4,6 +4,9 @@ def largest_of_two(a, b):
          return b
   
         return a   
+ 
+        return a   
+ 
      else:
         return b
 if __name__ == "__main__":
@@ -30,19 +33,23 @@ if __name__ == "__main__":
  
         return a   
  
+ 
     else:
+        return b
         return b
 if __name__ == "__main__":
     num1 = int(input("Enter the First Number :"))
     num2 = int(input("Enter the Second Number :"))
     res = largest_of_two(num1,num2)
-  keerthi
+ 
+    res = largest_of_two(num1,num2)
+ 
+ 
     print("The Largest Number is",res)
  
+ 
     print(res)
-
-    
- main
+ 
  
  
  
