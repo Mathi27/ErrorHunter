@@ -1,11 +1,7 @@
 # Find the Largest Number: Accept two numbers and print the larger one.
 def largest_of_two(a, b):
     if a > b:
-         return b
-  
-        return a   
- 
-        return a   
+         return a   
     
     else:
         return b
