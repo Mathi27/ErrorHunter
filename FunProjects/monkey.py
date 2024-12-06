@@ -42,12 +42,12 @@ def score(goal, testString):
  
 def main():  
     goalString = "Open Source Day 2024 "
-    newString = generateOne(35) 
+    newString = generateOne(input(" enter string:"))
     best += 0
     newScore = score(goalString, newString) 
       
     while newScore<=1: 
-        if newScore=>best: 
+        if newScore>=best: 
             print(newString) 
             best = newScore 
         newString = generateOne(35) 
@@ -55,3 +55,4 @@ def main():
   
 # Driver code 
 main()
+generateOne(newS)
