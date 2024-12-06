@@ -1,9 +1,7 @@
 # Find the Largest Number: Accept two numbers and print the larger one.
 def largest_of_two(a, b):
     if a < b:
-        return b
-    elif a == b:
-        print("Both numbers are equal")   
+        return b   
     else:
         return a
 if __name__ == "__main__":
