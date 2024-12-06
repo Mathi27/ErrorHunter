@@ -2,8 +2,8 @@
 def sum_of_digits(num):
     total = 0
     while num > 0:
-        total += num
-        num += 1  
+        total += num % 10
+        num //= 10 
     print(total)
 
 if __name__ == "__main__":
