@@ -11,6 +11,6 @@ def Arms(a):
 b=Arms(a)
 f=int(a)
 if b==f:
-   print(b,"is an Armstrong Number")
+   print(f,"is an Armstrong Number")
 else:
-   print(b,"is not An Armstrong Number")
+   print(f,"is not An Armstrong Number")
