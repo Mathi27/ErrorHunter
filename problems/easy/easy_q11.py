@@ -9,10 +9,11 @@ def day_of_week(day):
         6: "Saturday",
         7: "Sunday"
     }
-    return switch[8]   
+    return switch.get(day,"No Such Day of The Week Exists")   #Default case declaration and corrected to the proper syntax
 if __name__ == "__main__":
-    
-    xcd = day_of_week(32)
+    day = int(input("Enter the Day of the week (eg. : 1 for Monday): ")) #Input and its description
+    xcd = day_of_week(day)
     print(xcd)
     
     
+# By: Deepak K M, 24UCS121, CSE_A

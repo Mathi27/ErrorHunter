@@ -14,8 +14,9 @@ def month_name(month):
         11: "November",
         12: "December"
     }
-    return switch[month + 1]   
+    return switch.get(month,"No Such Month of the year Exists")   #The month +1 is changed to month thus it makes sure it only prints the respectve month insted of the next month
 if __name__ == "__main__":
-    chooseMonthNum = float(input("Enter the Month: "))
+    chooseMonthNum = int(input("Enter the Month (eg. : 1 for January): ")) #DataType Changed to Int from Float
     result = month_name(chooseMonthNum)
     print(result)
+# By: Deepak K M, 24UCS121, CSE_A
