@@ -21,3 +21,4 @@ def hangman():
         if "_" not in guessed:
             print("Congratulations! You guessed the word!")
             break
+hangman()        
