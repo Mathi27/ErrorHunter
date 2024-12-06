@@ -30,4 +30,5 @@ def string_manipulation_menu():
     else:
         print("Invalid option")
 
+
 string_manipulation_menu()
