@@ -9,8 +9,10 @@ def multiply(x, y):
     return x * y
 
 def divide(x, y):
-    return x / y
-
+    try:
+        return x / y
+    except Exception as e :
+        print(f"Error occured due to {e}") 
 while True:
     print("\nMENU")
     print("1. Add")
@@ -23,7 +25,9 @@ while True:
 
     if choice == '5':
         break
-
+    elif choice not in "1234" :
+        print("Invalid Choice")
+        continue
     num1 = float(input("Enter first number: "))
     num2 = float(input("Enter second number: "))
 
@@ -35,8 +39,5 @@ while True:
         result = multiply(num1, num2)
     elif choice == '4':
         result = divide(num1, num2)
-    else:
-        print("Invalid choice")
-        continue
-
+    
     print("Result: ", result)
