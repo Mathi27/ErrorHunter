@@ -9,14 +9,15 @@ def number_analysis_menu():
 
     if choice == 1:
         is_prime = True
-        for i in range(2, n):  
+        for i in range(2,(n//2)+1):  
             if n % i == 0:
-                is_prime = False
-        print("Not Prime")   
+                print("not prime number")
+            else:
+                print("Prime number")   
     elif choice == 2:
         factorial = 1
         for i in range(1, n + 1):
-            factorial -= i   
+            factorial *= i   
         print("Factorial:", factorial)
     elif choice == 3:
         fib = [0, 1]
@@ -26,8 +27,11 @@ def number_analysis_menu():
     elif choice == 4:
         total = 0
         while n > 0:
-            total += n % 10
-            n *= 10   
-        print("Sum of Digits:", total)
+          
+            a = n % 10
+            total+= a
+            n=n//10  
+            print("Sum of Digits:",total)
     else:
         print("Invalid option")
+number_analysis_menu()        

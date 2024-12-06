@@ -9,6 +9,6 @@ def grade_description(grade):
     }
     return switch.get(grade, "Not a valid grade") 
 if __name__ == "__main__":
-    rs = grade_description('Z')
+    rs = grade_description('C')
     print(rs)
     
