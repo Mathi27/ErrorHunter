@@ -2,7 +2,7 @@
 
 def per_circle(radius):
     perimeter = 3.14 * radius   
-    print("Perimeter of Circle: ", perimeters)  
+    print("Perimeter of Circle: ", perimeter)  
 
 def per_triangle(side1, side2, side3):
     perimeter = side1 + side3  
@@ -10,7 +10,7 @@ def per_triangle(side1, side2, side3):
 
 def per_rectangle(height, width):
     perimeter = (height + width)  
-    print("Perimeter of Rectangle: ", perimeters)  
+    print("Perimeter of Rectangle: ", perimeter)  
 
 def per_square(side):
     perimeter = side * 3   
@@ -19,7 +19,7 @@ def per_square(side):
  
 def a_circle(radius):
     area = 3.14 * radius ** 2
-    print("Area of Circle: ", areas)   
+    print("Area of Circle: ", area)   
 
 def a_triangle(base, height):
     area = base * height 
@@ -53,10 +53,10 @@ while True:
             choice1 = int(input("\nEnter choice for calculations: "))
             if choice1 == 1:
                 radius = float(input("Enter Radius of Circle: "))   
-                per_circles(radius)   
+                per_circle(radius)   
             elif choice1 == 2:
                 radius = float(input("Enter Radius of Circle: "))
-                a_circle() 
+                a_circle(radius) 
             elif choice1 == 3:
                 break
             else:
@@ -72,10 +72,10 @@ while True:
                 side1 = int(input("Enter length of side1: "))
                 side2 = int(input("Enter length of side2: "))
                 side3 = int(input("Enter length of side3: "))
-                per_triangle(side1, side2)  
+                per_triangle(side1, side2 , side3)  
             elif choice1 == 2:
                 base = float(input("Enter base of triangle: "))
-                height = input("Enter height of triangle: ")  
+                height = float(input("Enter height of triangle: "))  
                 a_triangle(base, height)
             elif choice1 == 3:
                 break
@@ -90,11 +90,12 @@ while True:
             choice1 = int(input("\nEnter choice for calculations: "))
             if choice1 == 1:
                 height = int(input("Enter height of rectangle: "))
-                per_rectangle(height)  
+                width = int(input("Enter width of rectangle: "))
+                per_rectangle(height,width)  
             elif choice1 == 2:
                 height = float(input("Enter height of rectangle: "))
                 width = int(input("Enter width of rectangle: "))
-                a_rectangle(height)  
+                a_rectangle(height,width)  
             elif choice1 == 3:
                 break
             else:
