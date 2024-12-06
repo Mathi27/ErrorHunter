@@ -7,8 +7,11 @@ def vowel_or_consonant(char):
         'o': "Vowel",
         'u': "Vowel",
     }
-    return switch.get(char, "Vowel")   
+    return switch.get(char.lower(),"Constant")   
 if __name__ == "__main__":
-    characterInput  = int(input("Enter the charactrer : "))
-    res = vowel_or_consonant(characterInput)
-    print(res)
+    characterInput  = input("Enter the charactrer : ")
+    if len(characterInput)==1:
+      res = vowel_or_consonant(characterInput)
+      print(res)
+    else:
+       print("Please enter exactly one character.")

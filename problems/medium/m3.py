@@ -24,7 +24,12 @@ def string_manipulation_menu():
     elif choice == 4:
         old = input("Substring to replace: ")
         new = input("Replacement substring: ")
+ 
+        s = s.replace(old, new)  
+        print("Updated String:", s)   
+ 
         print("Updated String:", s.replace(old,new))   
+ 
     else:
         print("Invalid option")
 string_manipulation_menu()

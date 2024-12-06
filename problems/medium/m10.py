@@ -2,7 +2,7 @@ import random
 
 def game_menu():
     while True:
-        print("\n1. Number Guessing Game")
+        print("1. Number Guessing Game")
         print("2. Rock-Paper-Scissors")
         print("3. Dice Roll Simulation")
         print("4. Exit")
@@ -31,5 +31,16 @@ def game_menu():
             break
         else:
             print("Invalid Choice")
+ 
+game_menu()
+ 
+ 
+x=input("Can we play some games?? (type yes and no)")
+if x=="yes":
+    game_menu()
+else:
+    print("Okey , let's play later!")
+ 
 
 game_menu()
+  
