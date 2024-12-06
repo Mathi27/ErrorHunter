@@ -10,6 +10,6 @@ def is_palindrome(num):
 if __name__ == "__main__":
     nums = int(input("Enter the Number: "))
     res = is_palindrome(nums)
-    print(res)
+    # print(res)
     
     

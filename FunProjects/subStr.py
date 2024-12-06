@@ -44,4 +44,4 @@ def test_1(string =""):
  
 print(test_1("character")) 
 print(test_1("standfan")) 
-print(test_1("class"))
+# print(test_1("class"))
