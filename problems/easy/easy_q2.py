@@ -2,10 +2,10 @@
 def largest_of_two(a, b):
     if a > b:
         return a   
-        return a   
+    
     else:
         return b
-        return b
+       
 if __name__ == "__main__":
     num1 = int(input("Enter the First Number :"))
     num2 = int(input("Enter the Second Number :"))
