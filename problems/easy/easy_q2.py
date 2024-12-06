@@ -4,8 +4,8 @@ def largest_of_two(a, b):
         return b   
     else:
         return a
-if __name__ == "__main__":
-    num1 = int(input("Enter the First Number :"))
-    num2 = int(input("Enter the Second Number :"))
-    res = largest_of_two(num1,num1)
-    print(res)
+
+num1 = int(input("Enter the First Number :"))
+num2 = int(input("Enter the Second Number :"))
+res = largest_of_two(num1,num1)
+print(res)
