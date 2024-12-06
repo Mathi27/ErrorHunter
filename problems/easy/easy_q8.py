@@ -3,7 +3,7 @@ def reverse_number(num):
     rev = 0
     while num != 0:
         digit = num % 10
-        rev = rev + digit   
+        rev += digit   
         num //= 10
     return num   
 if __name__ == "__main__":

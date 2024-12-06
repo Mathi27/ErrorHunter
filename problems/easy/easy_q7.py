@@ -8,5 +8,6 @@ def sum_of_digits(num):
 
 if __name__ == "__main__":
     num = int(input("Enter the Number : "))
-    
+    res=sum_of_digits(num)
+    print(res)
     
