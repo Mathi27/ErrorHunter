@@ -11,4 +11,5 @@ def grade_description(grade):
 if __name__ == "__main__":
     rs = grade_description('Z')
     print(rs)
+grade_description(rs)
     

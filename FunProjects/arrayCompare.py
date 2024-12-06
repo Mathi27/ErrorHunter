@@ -17,8 +17,8 @@ def comp(array1, array2):
      
     if (sorted(array1) == sorted([i ** 2 for i in array2])) and (sorted(array2) == sorted([i ** 2 for i in array1])):  
         return True
-      
-    return False
+    else:
+        return False
   
  
 comp([1,2,3,4], [1,4,9,16])
