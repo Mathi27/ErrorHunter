@@ -9,7 +9,7 @@ def day_of_week(day):
         6: "Saturday",
         7: "Sunday"
     }
-    if 1 < day < 7:
+    if 1 <= day <= 7:
         return switch[day]  
     else:
         return "Invalid Day"
