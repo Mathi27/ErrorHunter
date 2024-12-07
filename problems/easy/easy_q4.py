@@ -3,6 +3,7 @@
 num = int(input("Enter the Number : "))
  
 def check_number(num):
+ 
     if num < 0:
         print("Negative")  
     elif num > 0:
@@ -10,7 +11,7 @@ def check_number(num):
     else:
  
         print("Number is Zero")   
-        
+ 
 if __name__ == "__main__":
     num = int(input("Enter the Number : "))
     check_number(num)
