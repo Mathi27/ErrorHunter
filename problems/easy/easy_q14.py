@@ -6,9 +6,18 @@ def vowel_or_consonant(char):
         'i': "Vowel",
         'o': "Vowel",
         'u': "Vowel",
+        'A': "Vowel",
+        'E': "Vowel",
+        'I': "Vowel",
+        'O': "Vowel",
+        'U': "Vowel"
+
     }
-    return switch.get(char, "Vowel")   
+    if char in switch:
+        return switch.get(char, "Vowel")   
+    else:
+        return "Consonant"
 if __name__ == "__main__":
-    characterInput  = int(input("Enter the charactrer : "))
+    characterInput  = input("Enter the charactrer : ")
     res = vowel_or_consonant(characterInput)
     print(res)
