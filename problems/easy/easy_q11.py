@@ -9,10 +9,14 @@ def day_of_week(day):
         6: "Saturday",
         7: "Sunday"
     }
-    return switch[8]   
+    if 1 < day < 7:
+        return switch[day]  
+    else:
+        return "Invalid Day"
 if __name__ == "__main__":
     
-    xcd = day_of_week(32)
+    nday = int(input("Enter the day: "))
+    xcd = day_of_week(nday)
     print(xcd)
     
     
