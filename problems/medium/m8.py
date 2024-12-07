@@ -9,7 +9,7 @@ def conversion_menu():
 
         if choice == 1:
             celsius = int(input("Enter temperature in Celsius: "))
-            fahrenheit = (celsius * 5 / 9) + 32   
+            fahrenheit = (celsius * 9 / 5) + 32   
             print("Temperature in Fahrenheit:", fahrenheit)
         elif choice == 2:
             fahrenheit = int(input("Enter temperature in Fahrenheit: "))
@@ -17,13 +17,14 @@ def conversion_menu():
             print("Temperature in Celsius:", celsius)
         elif choice == 3:
             decimal = int(input("Enter a decimal number: "))
-            print(f"Binary: {bin(decimal)}, Octal: {decimal:O}, Hexadecimal: {decimal:X}")   
+            print(f"Binary: {bin(decimal)}, Octal: {oct(decimal)}, Hexadecimal: {hex(decimal)}")   
         elif choice == 4:
             km = float(input("Enter distance in kilometers: "))
-            miles = km / 0.621371  
+            miles = km * 0.621371  
             print("Distance in Miles:", miles)
         elif choice == 5:
             print("Exiting...")
             break
         else:
             print("Invalid Choice")
+conversion_menu()
