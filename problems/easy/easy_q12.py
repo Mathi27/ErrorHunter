@@ -1,10 +1,10 @@
 # Calculator: Accept two numbers and an operator (+, -, *, /) and perform the Calculation.
-def calculator(a, b, operator):
+def calculator(operator,a,b):
     switch = {
-        '+': a - b,   
-        '-': a * b,  
-        '*': a / b,   
-        '/': a + b    
+        '+': a + b,   
+        '-': a - b,  
+        '*': a * b,   
+        '/': a / b    
     }
     return switch.get(operator, "Invalid Operator")
 
