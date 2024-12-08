@@ -9,6 +9,8 @@ def multiply(x, y):
     return x * y
 
 def divide(x, y):
+    if y == 0:  
+        return "Error! Division by zero."
     return x / y
 
 while True:
@@ -22,10 +24,19 @@ while True:
     choice = input("Enter choice (1-5): ")
 
     if choice == '5':
+        print("Exiting the calculator. Goodbye!")
         break
 
-    num1 = float(input("Enter first number: "))
-    num2 = float(input("Enter second number: "))
+    if choice not in ['1', '2', '3', '4']: 
+        print("Invalid choice. Please enter a number between 1 and 5.")
+        continue
+
+    try:
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+    except ValueError:
+        print("Invalid input! Please enter valid numbers.")
+        continue
 
     if choice == '1':
         result = add(num1, num2)
@@ -35,8 +46,5 @@ while True:
         result = multiply(num1, num2)
     elif choice == '4':
         result = divide(num1, num2)
-    else:
-        print("Invalid choice")
-        continue
 
     print("Result: ", result)
