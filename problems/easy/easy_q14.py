@@ -12,7 +12,7 @@ if __name__ == "__main__":
     while True:
         characterInput  = input("Enter the charactrer : ")
         if len(characterInput)==1:
-            result = vowel_or_consonant(characterInput)
-            print(result)
+            res = vowel_or_consonant(characterInput)
+            print(res)
         else:
             print("Please enter exactly one character.")
