@@ -14,7 +14,7 @@ def rock_paper_scissors():
         print(f"Computer chose: {computer_choice}")
         
         if user_choice == computer_choice:
-            print("It's a tie!")
+            print("AHAHAH It's a tie! I challenge you for next round human !")
         elif (user_choice == "rock" and computer_choice == "scissors") or \
              (user_choice == "scissors" and computer_choice == "paper") or \
              (user_choice == "paper" and computer_choice == "rock"):
@@ -25,15 +25,18 @@ def rock_paper_scissors():
 def main():
     while True:
         print("\nMenu:")
-        print("1. Play Rock, Paper, Scissors")
-        print("2. Exit")
+        print("1. I Changelle you to play Rock, Paper, Scissors")
+        print ("2. Accept")
+        print("3. Reject")
         
         choice = input("Enter your choice: ")
         
         if choice == "1":
             rock_paper_scissors()
         elif choice == "2":
-            print("Thanks for playing!")
+            rock_paper_scissors()    
+        elif choice == "3":
+            print("Are you afraid of me ?")
             break
         else:
             print("Invalid choice! Please try again.")
