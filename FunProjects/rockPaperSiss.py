@@ -14,7 +14,8 @@ def rock_paper_scissors():
         print(f"Computer chose: {computer_choice}")
         
         if user_choice == computer_choice:
-            print("AHAHAH It's a tie! I challenge you for next round human !")
+            print("AHAHAH It's a tie! I challenge you for next round human !" )
+            print("Accept or Afraid")
         elif (user_choice == "rock" and computer_choice == "scissors") or \
              (user_choice == "scissors" and computer_choice == "paper") or \
              (user_choice == "paper" and computer_choice == "rock"):
