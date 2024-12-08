@@ -11,14 +11,25 @@ Consider two arrays a and b.
 def comp(array1, array2): 
       
    
-    if array1 is None and array2 is not None:  
+ 
+    if array1 is None and array2 is not None: 
+        print("The two arrays are not same ")
+
         return False
       
      
-    if (sorted(array1) == sorted([i ** 2 for i in array2])) and (sorted(array2) == sorted([i ** 2 for i in array1])):  
+    if (sorted(array1) == sorted([i ** 2 for i in array2])) or  (sorted(array2) == sorted([i ** 2 for i in array1])):
+        print(" if the two arrays are same or the elements of the first array are the square of the elements of the second array!!  ")  
+ 
+    if array1 is None or array2 is None: 
+        return False
+      
+     
+    if (sorted(array2) == sorted([i ** 2 for i in array1])):  
+ 
         return True
       
     return False
   
  
-comp([1,2,3,4], [1,4,9,16])
+print(comp([1,2,3,4], [1,4,9,16]))

@@ -17,8 +17,12 @@ def load_data():
     """Load expense data from the JSON file."""
     if not os.path.exists(DATA_FILE):
         return []
-    with open(DATA_FILE, 'r') as file:
-        return json.load(file)
+    try:
+        with open(DATA_FILE, 'r') as file:
+            return json.load(file)
+    except json.JSONDecodeError:
+        print("Error reading the data file. It may be corrupted.")
+        return []
 
 
 def save_data(expenses):
@@ -35,8 +39,16 @@ def add_expense(expenses):
         category = input("Enter category (e.g., Food, Transport): ").strip()
         description = input("Enter description: ").strip()
         date_str = input("Enter date (YYYY-MM-DD, leave blank for today): ").strip()
-        date = date_str if date_str else str(datetime.date.today())
-        expenses.append({"amount": amount, "category": category, "description": description, "date": date})
+        if date_str:
+            try:
+                date = datetime.datetime.strptime(date_str, "%Y-%m-%d").date()
+            except ValueError:
+                print("Invalid date format! Please use YYYY-MM-DD.")
+                return
+        else:
+            date = datetime.date.today()
+
+        expenses.append({"amount": amount, "category": category, "description": description, "date": str(date)})
         print("Expense added successfully!")
     except ValueError:
         print("Invalid input! Please try again.")
@@ -45,15 +57,18 @@ def add_expense(expenses):
 def delete_expense(expenses):
     """Delete an expense by index."""
     list_expenses(expenses)
+    if not expenses:
+        print("No expenses to delete!")
+        return
     try:
         index = int(input("Enter the index of the expense to delete: "))
         if 0 <= index < len(expenses):
             expenses.pop(index)
             print("Expense deleted successfully!")
         else:
-            print("Invalid index!")
+            print("Invalid index! Please try again.")
     except ValueError:
-        print("Invalid input! Please try again.")
+        print("Invalid input! Please Enter a Number.")
 
 
 # 3. Module for Listing and Summarizing Expenses
@@ -81,6 +96,9 @@ def show_category_summary(expenses):
     summary = summarize_expenses(expenses)
     if not summary:
         print("No expenses to summarize!")
+        return
+    if len(summary) < 2:
+        print("Not enough data to show a meaningful pie chart.")
         return
     categories = list(summary.keys())
     amounts = list(summary.values())

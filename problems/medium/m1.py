@@ -1,3 +1,4 @@
+ 
 '''
 Create a menu to perform basic mathematical operations (addition, subtraction, multiplication, division, modulo) on two numbers.
 
@@ -24,3 +25,4 @@ def math_operations_menu():
     else:
         print("Invalid option")
 math_operations_menu()
+ 
