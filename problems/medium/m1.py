@@ -31,6 +31,7 @@ def math_operations_menu(choice):
     else:
         print("Invalid option")
 math_operations_menu(choice)
+
 print("-------------Mathematical operation menu---------------")
 print("1. Add")
 print("2. Subtract")
