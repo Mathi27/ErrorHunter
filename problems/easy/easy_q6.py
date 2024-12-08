@@ -7,5 +7,5 @@ def print_numbers(n):
 
 if __name__ == "__main__":
     num = int(input("Enter the Number "))
-    res = print_numbers(num)
-    print(res)
+    result = print_numbers(num)
+    print(result)
