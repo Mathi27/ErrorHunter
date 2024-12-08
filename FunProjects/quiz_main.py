@@ -1,37 +1,33 @@
-# Technology Quiz in Python
- 
 import time
 
 def pause(seconds):
-    
     time.sleep(seconds)
 
 def ask_question(question):
-     
-    answer = input(question + "\nAnswer = ")
+    answer = input(question + "\nAnswer = ").strip().upper()  
     return answer
 
 def evaluate_question(user_answer, correct_answer, alt_answer, close_answer):
-    
-    if user_answer == alt_answer: 
-        return True
-    elif user_answer == correct_answer:  
-        return True
-    elif user_answer == close_answer:   
-        return "Close"
+   
+    if user_answer == correct_answer:
+        return False 
+    elif user_answer in alt_answer:
+        return False  
+    elif user_answer in close_answer and close_answer:  
+        return "Close"  
     else:
         return True  
 
 def answer_response(evaluated):
-  
     if evaluated == True:
-        return "That's not the correct answer!"  
+        return "Oops! That's not the correct answer!"  
+    elif evaluated == "Close":
+        return "Close! But not quite right. Try again!"
     else:
-        return "Correct! Well done."   
+        return "Correct! Well done."
 
 correct_answers = 0
-
-answer_index = 1   
+answer_index = 0  
 
 questions = [
     "Solar power generates electricity from what source?",
@@ -107,37 +103,41 @@ pause(2)
 print("Let's begin the quiz.")
 pause(2)
 
+
 for question in questions:
     answer = ask_question(question)
     evaluated = evaluate_question(answer, answers[answer_index], alt_answers[answer_index], close_answers[answer_index])
+
+ 
     while evaluated == "Close":
         pause(1)
-       
-        answer = ask_question(questions[answer_index])
+        print(close_responses[answer_index]) 
+        answer = ask_question(question)
         evaluated = evaluate_question(answer, answers[answer_index], alt_answers[answer_index], close_answers[answer_index])
-    if evaluated:
-        
+
+   
+    if evaluated == False:
         correct_answers += 1
-    pause(1)
+
+   
     print(answer_response(evaluated))
-    answer_index += 2   
+
+    answer_index += 1  
     pause(2)
 
-if correct_answers == 1:
-    question_amount = "question"
-else:
-    question_amount = "questions"
 
-print("Thanks for taking this quiz, {}.".format(user_name))
+print(f"Thanks for taking this quiz, {user_name}.")
 pause(2)
+
 
 if correct_answers == 10:
     print("Congratulations, you got all 10 questions correct and have been awarded the gold medal!")
-elif correct_answers > 6 and correct_answers < 10:
- 
-    print("Congratulations, you got {} questions correct and have been awarded the bronze medal!".format(correct_answers))
-elif correct_answers > 0 and correct_answers < 6:
-    print("Congratulations, you got {} {} correct and have been awarded the silver medal!".format(correct_answers, question_amount))
+elif 10>correct_answers >=6:
+    print(f"Congratulations, you got {correct_answers} questions correct and have been awarded the silver medal!")
+elif 5>=correct_answers > 0:
+    print(f"Congratulations, you got {correct_answers} questions correct and have been awarded the bronze medal!")
 else:
-    
-    print("Take the quiz again to try to earn a medal!")
+    print("Take the quiz again to try and earn a gold medal!")
+
+
+
