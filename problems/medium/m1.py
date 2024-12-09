@@ -1,3 +1,10 @@
+
+ 
+'''
+Create a menu to perform basic mathematical operations (addition, subtraction, multiplication, division, modulo) on two numbers.
+
+'''
+ 
 def math_operations_menu(choice):
  
     try:
@@ -50,4 +57,5 @@ def math_operations_menu(choice):
  
 math_operations_menu()
   
+ 
  

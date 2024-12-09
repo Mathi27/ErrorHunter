@@ -22,6 +22,13 @@ def array_operations_menu():
     elif choice == 4:
  
  
+        print("Soxrted Array:", sorted(arr)) 
+    else:
+        print("Invalid option")
+array_operations_menu()
+ 
+ 
+ 
         arr.sort()  # sorts the array in ascending order by default
         print("Sorted Array:", arr) 
     else:
@@ -45,4 +52,5 @@ array_operations_menu()
     else:
         print("Invalid option")
 array_operations_menu()
+ 
  

@@ -7,12 +7,12 @@ def guess_the_number():
     
     while True:
         try:
-            guess = input("Enter your guess (1-100): ")  
+            guess =int(input("Enter your guess (1-100): "))
             attempts += 1
             if guess < target:   
-                print("Too low!")
-            elif guess > target:
                 print("Too high!")
+            elif guess > target:
+                print("Too low!")
             else:
                 print(f"Congratulations! You guessed it in {attempts} attempts.")
                 break

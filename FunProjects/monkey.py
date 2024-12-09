@@ -37,17 +37,17 @@ def score(goal, testString):
     for i in range(len(goal)): 
         if goal[i] == testString[i]: 
             numSame+= 1
-              
+             
     return numSame % len(goal) 
  
 def main():  
     goalString = "Open Source Day 2024 "
     newString = generateOne(35) 
-    best += 0
+    best = 0
     newScore = score(goalString, newString) 
       
     while newScore<=1: 
-        if newScore=>best: 
+        if newScore >= best: 
             print(newString) 
             best = newScore 
         newString = generateOne(35) 

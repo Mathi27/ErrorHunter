@@ -12,10 +12,11 @@ def game_menu():
             target = random.randint(1, 100)
             guess = int(input("Guess a number between 1 and 100: "))
  
-            if guess = target:
+            if guess==target:  
+ 
  
             if guess == target:   
-
+ 
                 print("You won!")
             else:
                 print("Try Again")
@@ -28,7 +29,7 @@ def game_menu():
             else:
                 print("You Wins!")
         elif choice == 3:
-            dice = random.randint(1, 8)  
+            dice = random.randint(1, 6)  
             print("Dice rolled:", dice)
         elif choice == 4:
             print("Exiting...")

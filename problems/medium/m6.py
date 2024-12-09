@@ -1,3 +1,4 @@
+
 def file_handling_menu():
     print("1. Write to File")
     print("2. Read File")
@@ -5,24 +6,32 @@ def file_handling_menu():
     print("4. Append to File")
     choice = int(input("Enter your choice: "))
 
-    filename = input("Enter the file name: ")
-
+    
     if choice == 1:
         data = input("Enter data to write: ")
-        with open(filename, "r") as f:  
+        with open("abc.txt", "w") as f:  
             f.write(data)
+        f.close()
     elif choice == 2:
-        with open(filename, "r") as f:
-            print(f.read(10))  
+        with open("abc.txt", "r") as f:
+            print(f.read())
+            
+        f.close()  
     elif choice == 3:
-        with open(filename, "r") as f:
+        with open("abc.txt", "r") as f:
             lines = len(f.read().split("\n"))
-            words = len(f.read().split()) 
-            chars = sum(len(line) for line in f.readlines())  
+            chars = len(f.read().split()) 
+            words = sum(len(line) for line in f.readlines())  
             print("Lines:", lines, "Words:", words, "Characters:", chars)
+            
+        f.close()
     elif choice == 4:
         data = input("Enter data to append: ")
-        with open(filename, "w") as f:  
-            f.write(data)
+        f = open("abc.txt","a")
+        f.append(data)
+            
+            
+        f.close()
     else:
         print("Invalid option")
+file_handling_menu()

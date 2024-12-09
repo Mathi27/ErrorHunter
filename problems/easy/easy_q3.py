@@ -8,9 +8,14 @@ def is_leap_year(year):
         return "Leap Year"
  
  
+if __name__ == "__main__":
+    
+    num = int(input("Enter the number :"))
+    res = is_leap_year(num)
+    print(res)
+ 
     if year % 4 == 0 or year % 100 == 0 or year % 400 == 0:   
         return "Leap Year"
     else:
          return "Not a Leap Year"
  
-  

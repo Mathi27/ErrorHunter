@@ -4,7 +4,7 @@ class StudentGrades:
 
     def add_grade(self, student, grade):
         self.grades[student] = grade
-
+        print(student,"Grade is ",self.grades[student])
     def calculate_average(self):
         total = sum(self.grades.values())
         average = total / len(self.grades)

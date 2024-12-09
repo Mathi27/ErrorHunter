@@ -20,12 +20,12 @@ def test_1(string =""):
       
     for char in string: 
           
-        for i in range(initial, len(string)): 
+        for i in range(initial, len(string)+1): 
             substring+= string[i] 
               
              
             if substring.count(string[i])>=1: 
-                testList.append(substring[:1-]) 
+                testList.append(substring[:-1]) 
                 initial+= 1
                 substring = "" 
                 break

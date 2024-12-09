@@ -11,8 +11,12 @@ class TodoList:
             self.tasks.remove(task)
             print(f"Task '{task}' removed.")
         else:
+ 
+            print("The task was not found")
+ 
             print(f"task'{task}'not found in the list")
 
+ 
     def display_tasks(self):
         if self.tasks:
             print("your task:")
