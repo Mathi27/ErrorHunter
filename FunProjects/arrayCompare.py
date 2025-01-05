@@ -9,7 +9,18 @@ Consider two arrays a and b.
 '''
 # function to compare the arrays 
 def comp(array1, array2): 
-      
+ 
+    # Handle edge cases where one or both arrays could be None
+    if array1 is None or array2 is None:
+        return array1 == array2  # Return True only if both are None
+
+    # Check if sorted squares of array1 are equal to sorted elements of array2
+    return (sorted(array1) == sorted([i ** 2 for i in array2])) or (sorted(array2) == sorted([i ** 2 for i in array1]))
+ 
+# Example usage:
+print(comp([1, 2, 3, 4], [1, 4, 9, 16]))
+ 
+ 
    
  
     if array1 is None and array2 is not None: 
@@ -32,4 +43,11 @@ def comp(array1, array2):
     return False
   
  
+ 
 print(comp([1,2,3,4], [1,4,9,16]))
+ 
+lis1=eval(input("Enter list 1: "))
+lis2=eval(input("Enter list 2: "))
+print(comp(lis1,lis2))
+ 
+ 
