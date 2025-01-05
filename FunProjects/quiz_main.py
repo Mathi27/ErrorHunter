@@ -20,14 +20,14 @@ def evaluate_question(user_answer, correct_answer, alt_answer, close_answer):
     elif user_answer == close_answer:   
         return "Close"
     else:
-        return True  
+        return False  
 
 def answer_response(evaluated):
   
     if evaluated == True:
-        return "That's not the correct answer!"  
+        return "Correct! Well done"  
     else:
-        return "Correct! Well done."   
+        return "That's not the correct answer!."   
 
 correct_answers = 0
 

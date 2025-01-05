@@ -25,7 +25,7 @@ def test_1(string =""):
               
              
             if substring.count(string[i])>=1: 
-                testList.append(substring[:-1]) 
+                testList.remove(substring[:-1]) 
                 initial+= 1
                 substring = "" 
                 break
