@@ -1,21 +1,15 @@
-# Check Even or Odd: Write a program to check if a given number is even or odd.
- 
-try:
-   num = int(input("Enter a number: "))
-   if num % 2 != 0:
-      print(f"{num} is Odd")
-   else:
-      print(f"{num} is Even")
-except ValueError:
-   print("Enter only INTEGER that is ONLY NUMBER")
- 
+def check_even_or_odd():
+    try:
+        num = int(input("Enter an integer: "))
+        if num % 2 == 0:
+            print(f"{num} is Even")
+        else:
+            print(f"{num} is Odd")
+    except ValueError:
+        print("Invalid input! Please enter a valid integer number.")
 
-num = int(input("Enter a number: "))
- 
-if (num %2) == 0:
-   print("{0} is even".format(num))
-else:
- 
-   print(f"{num} is Even")
+# Run the function
+check_even_or_odd()
+
  
  
