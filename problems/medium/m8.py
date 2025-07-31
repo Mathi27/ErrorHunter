@@ -9,7 +9,7 @@ def conversion_menu():
 
         if choice == 1:
             celsius = int(input("Enter temperature in Celsius: "))
-            fahrenheit = (celsius * 5 / 9) + 32   
+            fahrenheit = (celsius * 9 / 5) + 32   
             print("Temperature in Fahrenheit:", fahrenheit)
         elif choice == 2:
             fahrenheit = int(input("Enter temperature in Fahrenheit: "))
@@ -22,7 +22,7 @@ def conversion_menu():
             selection = int(input("Enter 1 for KM to Miles (or) 2 for Miles to KM : "))
             if selection == 1:
                 km = float(input("Enter distance in kilometers: "))
-                miles = km / 0.621371  
+                miles = km * 0.621371  
                 print("Distance in Miles:", miles)
             else:
                 miles = float(input("Enter distance in miles :"))
@@ -33,3 +33,8 @@ def conversion_menu():
             break
         else:
             print("Invalid Choice")
+
+
+if __name__=="__main__":
+    conversion_menu()
+
