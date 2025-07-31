@@ -3,7 +3,6 @@ def grade_system(m):
     elif m >= 80: return "B"
     elif m >= 70: return "C"
     else: return "F"
-
 marks = int(input("Enter Marks: "))
 print(grade_system(marks))
   
