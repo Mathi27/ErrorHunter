@@ -16,6 +16,6 @@ if (num %2) == 0:
    print("{0} is even".format(num))
 else:
  
-   print(f"{num} is Even")
+   print(f"{num} is Odd")
  
  
