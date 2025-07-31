@@ -1,57 +1,15 @@
  
 # Find the Largest Number: Accept two numbers and print the larger one.
 try:
-    def largest_of_two(a, b):
-        if a > b:
-            return a   
-        else:
-            return b
-    if __name__ == "__main__":
-        num1 = int(input("Enter the First Number :"))
-        num2 = int(input("Enter the Second Number :"))
-        res = largest_of_two(num1,num2)
-        print(res)
+    num1 = int(input("Enter a num1:"))
+    num2 = int (input("Enter a num2:"))
+
+    if (num1 > num2):
+       print("n1 is the largest number!!")
+    elif (num1 < num2):
+       print("n2 is the largest number!!")
+    else:
+       print("both numbers are equal!!")
+       
 except ValueError:
-    print("ENTER ONLY INTEGER VALUES")
- 
-# Find the Largest Number: Accept two numbers and print the larger one.
-def largest_of_two(a, b):
- 
-    if a > b:
-        return a   
-    else:
-        return b
- 
-    if a < b:
-        return b   
-    else:
-        return a
-
-num1 = int(input("Enter the First Number :"))
-num2 = int(input("Enter the Second Number :"))
-res = largest_of_two(num1,num1)
-print(res)
- 
-    if a > b:
- 
-        return a  
-    else:
-        return b
- 
- 
-        return a  
-    else:
-        return b
- 
-        return a   
-    else:
-
-        return b
- 
- 
-if __name__ == "__main__":
-    num1 = int(input("Enter the First Number :"))
-    num2 = int(input("Enter the Second Number :"))
-    res = largest_of_two(num1,num2)
-    print(res)
- 
+    print("Enter only integer number!!")
