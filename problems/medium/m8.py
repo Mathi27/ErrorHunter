@@ -35,8 +35,6 @@ def conversion_menu():
             print("Invalid Choice")
 
 
-conversion_menu()
-
 if __name__=="__main__":
     conversion_menu()
 
