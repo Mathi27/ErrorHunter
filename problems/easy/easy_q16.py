@@ -1,32 +1,23 @@
-# Print the Sum of First and Last Array Element
 def sum_first_last(arr):
- 
-    for i in range(len(arr)):
-        return arr[0] + arr[-1]  
- 
- 
     if len(arr) < 2:
-        return "Array must have at least two characters."
+        return "Array must have at least two elements."
     return arr[0] + arr[-1]
 
- 
+
 if __name__ == "__main__":
-    user = [int(x) for x in (input("Enter a collection number:")).split(",")]
- 
-    print(sum_first_last(user))
- 
- 
-    arr=int()
-    sum_first_last()
- 
-    arr=[]
-    n=int(input("Enter the Total number of Elements:"))
+    # Input 1: user enters comma-separated numbers
+    user_input = input("Enter a collection of numbers separated by commas: ")
+    user = [int(x.strip()) for x in user_input.split(",")]
+    print("Sum of first and last element:", sum_first_last(user))
+
+    # Input 2: user enters numbers one by one
+    arr = []
+    n = int(input("Enter the total number of elements: "))
     for i in range(n):
-        x=int(input("Enter the element :"))
+        x = int(input(f"Enter element {i+1}: "))
         arr.append(x)
- 
-    arr=[2,5,8,7,6]
- 
-    print(sum_first_last(arr))
- 
- 
+    print("Sum of first and last element:", sum_first_last(arr))
+
+    # Test with a predefined list
+    arr = [2, 5, 8, 7, 6]
+    print("Sum of first and last element (predefined list):", sum_first_last(arr))
