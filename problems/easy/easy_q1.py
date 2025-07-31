@@ -5,4 +5,4 @@ try:
     else:
         print(f"{num} is Odd")
 except ValueError:
-    print("Enter only an INTEGER number.")
+    print("Enter only INTEGER that is ONLY NUMBER")
