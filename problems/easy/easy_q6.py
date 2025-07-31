@@ -4,4 +4,3 @@ while i<= num:
     print("\n",i)
     i = i+1
     
-8
