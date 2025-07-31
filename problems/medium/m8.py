@@ -33,3 +33,6 @@ def conversion_menu():
             break
         else:
             print("Invalid Choice")
+
+
+conversion_menu()
