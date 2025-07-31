@@ -7,7 +7,7 @@ def check_number(num):
     elif num > 0:
         print("Positive")  
     else:
-        print("Number is negative")   
+        print("Number is zero")   
         
 if __name__ == "__main__":
     num = int(input("Enter the Number : "))
@@ -21,13 +21,13 @@ if __name__ == "__main__":
  
  
 num = int(input("Enter the Number : "))
-    if num < 0:
-        print("Negative") 
-        exit()
-    elif num > 0:
-        print("Positive")
-        exit()  
-    else:
-        print("Number is negative")   
-        exit()
+if num < 0:
+    print("Negative") 
+    exit()
+elif num > 0:
+    print("Positive")
+    exit()  
+else:
+    print("Number is zero")   
+    exit()
  
