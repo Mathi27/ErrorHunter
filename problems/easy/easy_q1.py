@@ -8,14 +8,3 @@ try:
       print(f"{num} is Even")
 except ValueError:
    print("Enter only INTEGER that is ONLY NUMBER")
- 
-
-num = int(input("Enter a number: "))
- 
-if (num %2) == 0:
-   print("{0} is even".format(num))
-else:
- 
-   print(f"{num} is Even")
- 
- 
