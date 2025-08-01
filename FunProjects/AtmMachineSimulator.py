@@ -5,7 +5,6 @@ class ATM:
     def deposit(self, amount):
  
         global deposit_history
-        if amount <= 0:
  
         if amount >= 0:
  
