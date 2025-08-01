@@ -16,7 +16,7 @@ class StudentGrades:
         average = total / len(self.grades)
         return average
 
-# Example Usage
+# Example Usage !
 grades = StudentGrades()
 grades.add_grade("John", 85)
 grades.add_grade("Sarah", 90)

@@ -14,3 +14,5 @@ if __name__ == "__main__":
     characterInput = input("Enter a single alphabet character: ")
     result = vowel_or_consonant(characterInput)
     print("Result:", result)
+
+    
