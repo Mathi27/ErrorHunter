@@ -8,9 +8,6 @@ For example: The directions [“NORTH”, “SOUTH”, “SOUTH”, “EAST”, 
 def reduce_dir(dt):
 
  
- 
-def reduce_dir(directions):
- 
     opposite = {
         "EAST":  "WEST",
         "WEST":  "EAST",
@@ -25,44 +22,12 @@ def reduce_dir(directions):
         if stack and opposite[d] == stack[-1]:
             stack.pop()
         else:
- 
-    for d in directions:
-        if stack and opposite[d] == stack[-1]:
- 
-          
-             
-          
-            stack.pop()
-            
- 
-          stack.pop()
- 
-        else:
- 
- 
             stack.append(d)
-    print(stack)
  
     return stack
 
-dir = ["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"]
-reduce_dir(dir)
- 
-    return stack
-
-dir = ["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"]
-reduce_dir(dir)
- 
- 
-          stack.append(d)
-    
-    return stack
-
-directions = ["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"]
- 
-print(reduce_dir(directions))
- 
-result = reduce_dir(directions)
-print(result)
+dir = ["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"] 
+result = reduce_dir(dir)
+print("Reduced direction : ",result)
  
  
