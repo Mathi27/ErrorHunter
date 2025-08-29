@@ -6,10 +6,7 @@ Create a menu to perform basic mathematical operations (addition, subtraction, m
  
  
 def math_operations_menu(a,b,operator):
-   
- 
- 
-def math_operations_menu():
+   def math_operations_menu():
     print("1. Add")
     print("2. Subtract")
     print("3. Multiply")
@@ -43,7 +40,7 @@ def math_operations_menu():
             break   
         else:
             print("Invalid option")
-math_operations_menu()
+    math_operations_menu()
  
  
     choice = int(input("Enter your choice: "))
@@ -99,8 +96,3 @@ print("3. Multiply")
 print("4. Divide")
 print("5. Modulus")
 print("6. Expontential")
- 
- )
- 
- 
- 
