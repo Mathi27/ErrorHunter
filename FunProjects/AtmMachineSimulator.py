@@ -3,12 +3,16 @@ class ATM:
         self.balance = balance
 
     def deposit(self, amount):
+      fix-atm-deposit
+        if amount <= 0:
+
  
         global deposit_history
         if amount <= 0:
  
         if amount >= 0:
  
+        main
             print("Amount must be positive.")
         else:
             self.balance += amount
