@@ -1,20 +1,12 @@
-# Leap Year or Not: Write a program to determine whether a given year is a leap year.
 def is_leap_year(year):
- 
-    if year % 4 == 0:
-        print("leap year")
+    if (year % 400 == 0) or (year % 4 == 0 and year % 100 != 0):
+        print(f"{year} is a leap year")
     else:
-        print("not a leap year")
+        print(f"{year} is not a leap year")
 
 if __name__ == "__main__":
-    
-    num = int(input("Enter the number :"))
-    is_leap_year(num)
- 
-    if year % 4 == 0 and year % 100 != 0 or year % 400 == 0:   
- 
-        return "Leap Year"
-    else:   
- 
-        return "Not a Leap Year"
- 
+    try:
+        num = int(input("Enter the year: "))
+        is_leap_year(num)
+    except ValueError:
+        print("Please enter a valid integer year.")
