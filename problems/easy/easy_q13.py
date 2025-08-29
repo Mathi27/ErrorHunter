@@ -1,6 +1,5 @@
-# Month Name: Write a program that takes a number (1-12) and prints the corresponding month name using a switch case.
 def month_name(month):
-    switch = {
+    months = {
         1: "January",
         2: "February",
         3: "March",
@@ -14,12 +13,14 @@ def month_name(month):
         11: "November",
         12: "December"
     }
- 
-    return switch.get(month)   
+
+    return months.get(month, "Invalid month number")
+
 if __name__ == "__main__":
-    chooseMonthNum = int(input("Enter the Month from 1 to 12: "))
- 
- 
-    return switch.get(month, "Invalid Month")
+    try:
+        chooseMonthNum = int(input("Enter the Month from 1 to 12: "))
+        print("Month is:", month_name(chooseMonthNum))
+    except ValueError:
+        print("Invalid input. Please enter a number.")
  
  
