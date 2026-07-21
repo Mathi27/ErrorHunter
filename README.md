@@ -1,10 +1,10 @@
-# 🐞 Bugfix repo (contains python code challenges)
+# Bugfix repo (contains python code challenges)
 
 Welcome to the **BugFix Challenges Repository**! This is a beginner-friendly, open-source project where you can improve your coding skills by identifying and fixing bugs in pre-written solutions to coding problems. It's also an excellent opportunity to learn how to contribute to open-source projects.
 
 ---
 
-## 🚀 Project Overview
+## Project Overview
 
 This repository contains:
 - A collection of buggy solutions to various coding problems.
