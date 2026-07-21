@@ -19,7 +19,7 @@ Your mission is to:
 
 ---
 
-## 🛠️ Getting Started
+## Getting Started
 
 ### Prerequisites
 - Python 3.8 or later
@@ -68,3 +68,4 @@ This project is licensed under the MIT License. Feel free to use, modify, and di
 
 ## 🙋 FAQs
 Got questions? Check out the FAQs.  If your question isn't listed, feel free to create an issue!
+# This is newly added line for testing
