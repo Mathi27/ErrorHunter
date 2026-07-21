@@ -1,29 +1,23 @@
 # Vowel or Consonant: Accept a character and use a switch case to determine if it is a vowel or a consonant.
 def vowel_or_consonant(char):
+    if len(char) != 1 or not char.isalpha():
+        return "Invalid input"
     char=char.lower()
+    
     switch = {
         'a': "Vowel",
         'e': "Vowel",
         'i': "Vowel",
         'o': "Vowel",
-        'u': "Vowel",
-        'A': "Vowel",
-        'E': "Vowel",
-        'I': "Vowel",
-        'O': "Vowel",
-        'U': "Vowel",
+        'u': "Vowel"
     }
- 
-    if char in switch:
-        return "Vowels" 
-    else:
-        return "Consonant"
+
+    return switch.get(char, "Consonant")
 if __name__ == "__main__":
     characterInput  = input("Enter the character : ")
  
-    return switch.get(char)
+    print(vowel_or_consonant(characterInput))
 
  
  
-    return switch.get(char, "constant")   
- 
+    
